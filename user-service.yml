@@ -2,7 +2,7 @@ server:
   port: 1025
 
 project:
-  owner: giangnt
+  owner: giangnt_pro
 
 spring:
   application:
