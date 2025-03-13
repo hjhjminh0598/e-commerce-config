@@ -1,8 +1,4 @@
 spring:
-  datasource:
-    username: admin
-    password: giangnt@2025
-    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
@@ -12,6 +8,8 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
+  kafka:
+    bootstrap-servers: localhost:9092
 
 eureka:
   client:
@@ -20,3 +18,44 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      productService:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 3
+  retry:
+    instances:
+      productService:
+        maxAttempts: 3
+        waitDuration: 2s
+        retryExceptions:
+          - feign.RetryableException
+          - feign.FeignException.ServiceUnavailable
+          - java.net.ConnectException
+  bulkhead:
+    instances:
+      productService:
+        maxConcurrentCalls: 10
+        maxWaitDuration: 500ms
+  ratelimiter:
+    instances:
+      productService:
+        limitForPeriod: 10
+        limitRefreshPeriod: 1s
+        timeoutDuration: 500ms
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info, bus-refresh
+
+kafka:
+  topic:
+    user-created: user-created-topic
+    product-created: product-created-topic
+    order-created: order-created-topic
