@@ -21,7 +21,7 @@ spring:
 
 kafka:
   consumer:
-    product-group-id: order-service-group
+    product-group-id: product-service-group
 
 #eureka:
 #  client:
