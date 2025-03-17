@@ -25,15 +25,7 @@ spring:
           predicates:
             - Path=/api/v1/orders/**
 
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-#  client:
-#    service-url:
-#      defaultZone: http://localhost:8761/eureka/
-#
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: refresh, health, info, bus-refresh
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/api/v1/payments/**
