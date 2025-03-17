@@ -1,14 +1,11 @@
 server:
-  port: 1025
-
-project:
-  owner: giangnt_pro
+  port: 4025
 
 spring:
   application:
-    name: user-service
+    name: payment-service
   datasource:
-    url: jdbc:mysql://localhost:3306/user_db
+    url: jdbc:mysql://localhost:3312/payment_db
     username: admin
     password: giangnt@2025
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -21,3 +18,13 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
+
+feign:
+  client:
+    config:
+      productServiceClient:
+        retryer: feign.Retryer.NEVER_RETRY
+
+kafka:
+  consumer:
+    payment-group-id: payment-service-group
