@@ -27,4 +27,5 @@ feign:
 
 kafka:
   consumer:
-    payment-group-id: payment-service-group
+    payment-group: payment-group
+
