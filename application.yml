@@ -59,4 +59,5 @@ kafka:
     user-created: user-created-topic
     product-created: product-created-topic
     order-created: order-created-topic
+    order-created-dlq: order-created-dlq
     payment-created: payment-created-topic
