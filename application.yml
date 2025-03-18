@@ -11,7 +11,7 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     streams:
-      application-id: order-streams-app
+      application-id: payment-streams-app
       num-stream-threads: 1
 
 eureka:
