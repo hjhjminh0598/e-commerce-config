@@ -18,6 +18,9 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
+  kafka:
+    streams:
+      application-id: payment-streams-app
 
 feign:
   client:
