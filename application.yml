@@ -10,9 +10,9 @@ spring:
           time_zone: UTC
   kafka:
     bootstrap-servers: localhost:9092
-    streams:
-      application-id: payment-streams-app
-      num-stream-threads: 1
+#    streams:
+#      application-id: payment-service
+#      num-stream-threads: 1
 
 eureka:
   client:
