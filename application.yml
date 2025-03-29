@@ -13,6 +13,12 @@ spring:
     schema-registry:
       url: http://localhost:8081
 
+jwt:
+  secret: giangnt@2025randomasdawdakj
+  expiration: 86400000
+  token-prefix: Bearer
+  header-string: Authorization
+
 eureka:
   client:
     service-url:
