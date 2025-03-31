@@ -14,7 +14,7 @@ spring:
       url: http://localhost:8081
 
 jwt:
-  secret: giangnt@2025randomasdawdakj
+  secret: giangnt@2025randomasdawdakjcawnmawdawqe
   expiration: 86400000
   token-prefix: Bearer
   header-string: Authorization
