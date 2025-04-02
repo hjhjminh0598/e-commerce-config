@@ -17,7 +17,7 @@ spring:
 
 jwt:
   secret: giangnt2025randomasdawdakjcawnmawdawqerandomagainaweadawdasdawdawkanwdk
-  expiration: 60000 #1 minutes
+  expiration: 86400000 #1 day
   refresh-token-expiration: 604800000 # 7 days
   token-prefix: Bearer
   header-string: Authorization
