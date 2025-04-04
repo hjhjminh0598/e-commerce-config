@@ -15,7 +15,8 @@ spring:
           predicates:
             - Path=/api/v1/users/**
           filters:
-            - JwtAuthenticationFilter
+            - name: JwtAuthenticationFilter
+              args: {}
 
         - id: product-service
           uri: lb://PRODUCT-SERVICE
