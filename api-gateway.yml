@@ -10,12 +10,18 @@ spring:
           lower-case-service-id: true
           cache-lifetime: 5
       routes:
-        - id: user-service
+        - id: user-service-public
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/v1/users/auth/login,/api/v1/users/refresh-token
+
+        - id: user-service-protected
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/v1/users/**
           filters:
-            - JwtAuthenticationFilter
+            - name: JwtAuthenticationFilter
+              args: {}
 
         - id: product-service
           uri: lb://PRODUCT-SERVICE
