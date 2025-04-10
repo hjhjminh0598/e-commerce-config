@@ -26,8 +26,8 @@ spring:
       client:
         registration:
           google:
-            client-id: 707399821864-f1md6ahilnirecilig9fr173r7nudhp7.apps.googleusercontent.com
-            client-secret: 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
+            client-id: 707399821864-ur0e9oe8o5cgimv9q2smbggmi55s6gfb.apps.googleusercontent.com
+            client-secret: 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
             redirect-uri: "{baseUrl}/login/oauth2/code/google"
             scope: openid,profile,email
         provider:
