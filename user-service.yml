@@ -21,3 +21,19 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 707399821864-f1md6ahilnirecilig9fr173r7nudhp7.apps.googleusercontent.com
+            client-secret: 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
+            redirect-uri: "{baseUrl}/login/oauth2/code/google"
+            scope: openid,profile,email
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+            jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
+            user-name-attribute: sub
