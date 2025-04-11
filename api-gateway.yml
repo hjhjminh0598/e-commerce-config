@@ -13,7 +13,7 @@ spring:
         - id: user-service-public
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/v1/users/auth/login/**, /api/v1/users/auth/refresh_token
+            - Path=/api/v1/users/auth/login/**, /api/v1/users/auth/refresh_token, /login/oauth2/code/google
 
         - id: user-service-protected
           uri: lb://USER-SERVICE
@@ -21,7 +21,7 @@ spring:
             - Path=/api/v1/users/**
           filters:
             - name: JwtAuthenticationFilter
-              args: {}
+              args: { }
 
         - id: product-service
           uri: lb://PRODUCT-SERVICE
