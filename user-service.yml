@@ -1,9 +1,6 @@
 server:
   port: 1025
 
-project:
-  owner: giangnt_pro
-
 spring:
   application:
     name: user-service
@@ -28,7 +25,6 @@ spring:
           google:
             client-id: 707399821864-ur0e9oe8o5cgimv9q2smbggmi55s6gfb.apps.googleusercontent.com
             client-secret: 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
-            #            redirect-uri: "{baseUrl}/login/oauth2/code/google"
             redirect-uri: "http://localhost:8080/login/oauth2/code/google"
             scope: openid,profile,email
         provider:
