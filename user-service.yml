@@ -5,7 +5,7 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:mysql://localhost:3306/user_db
+    url: jdbc:mysql://mysql_user:3306/user_db
     username: admin
     password: giangnt@2025
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -25,7 +25,7 @@ spring:
           google:
             client-id: 707399821864-ur0e9oe8o5cgimv9q2smbggmi55s6gfb.apps.googleusercontent.com
             client-secret: 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
-            redirect-uri: "http://localhost:8080/login/oauth2/code/google"
+            redirect-uri: "http://api-gateway:8080/login/oauth2/code/google"
             scope: openid,profile,email
         provider:
           google:
@@ -34,3 +34,12 @@ spring:
             user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
             jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
             user-name-attribute: sub
+  kafka:
+    bootstrap-servers: kafka:9092
+    schema-registry:
+      url: http://schema-registry:8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/

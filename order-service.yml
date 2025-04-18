@@ -5,7 +5,7 @@ spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:mysql://localhost:3310/order_db
+    url: jdbc:mysql://mysql_order:3306/order_db
     username: admin
     password: giangnt@2025
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,6 +18,10 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
+  kafka:
+    bootstrap-servers: kafka:9092
+    schema-registry:
+      url: http://schema-registry:8081
 
 feign:
   client:
@@ -28,3 +32,8 @@ feign:
 kafka:
   consumer:
     order-group: order-group
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/

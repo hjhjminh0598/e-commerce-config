@@ -5,7 +5,7 @@ spring:
   application:
     name: payment-service
   datasource:
-    url: jdbc:mysql://localhost:3312/payment_db
+    url: jdbc:mysql://mysql_payment:3306/payment_db
     username: admin
     password: giangnt@2025
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -19,6 +19,9 @@ spring:
         jdbc:
           time_zone: UTC
   kafka:
+    bootstrap-servers: kafka:9092
+    schema-registry:
+      url: http://schema-registry:8081
     streams:
       application-id: payment-streams-app
 
@@ -32,3 +35,7 @@ kafka:
   consumer:
     payment-group: payment-group
 
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/

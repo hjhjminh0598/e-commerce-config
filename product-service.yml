@@ -5,7 +5,7 @@ spring:
   application:
     name: product-service
   datasource:
-    url: jdbc:mysql://localhost:3308/product_db
+    url: jdbc:mysql://mysql_product:3306/product_db
     username: admin
     password: giangnt@2025
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -18,7 +18,16 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
+  kafka:
+    bootstrap-servers: kafka:9092
+    schema-registry:
+      url: http://schema-registry:8081
 
 kafka:
   consumer:
     product-group: product-group
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/

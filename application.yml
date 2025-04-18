@@ -11,21 +11,21 @@ spring:
         jdbc:
           time_zone: UTC
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
     schema-registry:
-      url: http://localhost:8081
+      url: http://schema-registry:8081
 
 jwt:
   secret: giangnt2025randomasdawdakjcawnmawdawqerandomagainaweadawdasdawdawkanwdk
-  expiration: 86400000 #1 day
-  refresh-token-expiration: 604800000 # 7 days
+  expiration: 86400000
+  refresh-token-expiration: 604800000
   token-prefix: Bearer
   header-string: Authorization
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
   instance:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
@@ -69,7 +69,7 @@ management:
       probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://localhost:9411/api/v2/spans
+      endpoint: http://zipkin:9411/api/v2/spans
 
 kafka:
   topic:
