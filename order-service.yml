@@ -19,9 +19,9 @@ spring:
         jdbc:
           time_zone: UTC
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: localhost:9092
     schema-registry:
-      url: http://schema-registry:8081
+      url: http://localhost:8081
 
 feign:
   client:
@@ -36,4 +36,4 @@ kafka:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/

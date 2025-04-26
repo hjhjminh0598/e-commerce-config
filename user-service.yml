@@ -35,11 +35,11 @@ spring:
             jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
             user-name-attribute: sub
   kafka:
-    bootstrap-servers: kafka:9092
+    bootstrap-servers: localhost:9092
     schema-registry:
-      url: http://schema-registry:8081
+      url: http://localhost:8081
 
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
