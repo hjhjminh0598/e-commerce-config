@@ -5,9 +5,9 @@ spring:
   application:
     name: payment-service
   datasource:
-    url: jdbc:mysql://mysql_payment:3306/payment_db
-    username: admin
-    password: giangnt@2025
+    url: jdbc:mysql://34.58.21.186:3306/payment_db
+    username: root
+    password: giangnt_userdbD\ppv2/t/NEqdVlJ
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
