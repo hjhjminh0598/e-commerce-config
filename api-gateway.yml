@@ -13,7 +13,7 @@ spring:
         - id: user-service-public
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/v1/users/auth/login/**, /api/v1/users/auth/refresh_token, /login/oauth2/code/google, /oauth2/authorization/google
+            - Path=/api/v1/users/auth/login/**, /api/v1/users/auth/refresh_token, /login/oauth2/code/google, /oauth2/authorization/google, /api/v1/users/**
 
         - id: user-service-protected
           uri: lb://USER-SERVICE
