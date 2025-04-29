@@ -5,9 +5,9 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:mysql://34.31.104.67:3306/user_db
+    url: jdbc:mysql://35.193.59.165:3306/user_db
     username: root
-    password: giangnt_userdbD\ppv2/t/NEqdVlJ
+    password: giangnt@?Z?Ci31;Z(}6[kSq
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

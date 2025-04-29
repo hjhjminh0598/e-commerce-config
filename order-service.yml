@@ -5,9 +5,9 @@ spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:mysql://34.28.83.235:3306/order_db
+    url: jdbc:mysql://35.193.59.165:3306/order_db
     username: root
-    password: giangnt_userdbD\ppv2/t/NEqdVlJ
+    password: giangnt@?Z?Ci31;Z(}6[kSq
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
