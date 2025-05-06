@@ -11,9 +11,9 @@ spring:
         jdbc:
           time_zone: UTC
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: 34.46.5.7:30721
     schema-registry:
-      url: http://localhost:8081
+      url: http://34.46.5.7:31580
 
 jwt:
   secret: giangnt2025randomasdawdakjcawnmawdawqerandomagainaweadawdasdawdawkanwdk
