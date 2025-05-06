@@ -34,10 +34,6 @@ spring:
             user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
             jwk-set-uri: https://www.googleapis.com/oauth2/v3/certs
             user-name-attribute: sub
-  kafka:
-    bootstrap-servers: localhost:9092
-    schema-registry:
-      url: http://localhost:8081
 
 eureka:
   client:

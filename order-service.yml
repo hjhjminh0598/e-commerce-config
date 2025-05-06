@@ -18,10 +18,6 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
-  kafka:
-    bootstrap-servers: localhost:9092
-    schema-registry:
-      url: http://localhost:8081
 
 feign:
   client:
