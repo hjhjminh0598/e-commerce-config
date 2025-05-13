@@ -1,6 +1,16 @@
 server:
   port: 8761
 
+spring:
+  application:
+    name: eureka-server  # Must match 'eureka-server.yml' in Git
+  config:
+    import: "configserver:"  # ✅ REQUIRED for Spring Boot 3.x
+  cloud:
+    config:
+      uri: http://34.46.5.7:32746  # Fetch from Cloud Config Server
+      fail-fast: true  # Ensure Eureka Server fails fast if Config Server is unavailable
+
 eureka:
   instance:
     hostname: localhost
