@@ -28,8 +28,3 @@ feign:
 kafka:
   consumer:
     order-group: order-group
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/

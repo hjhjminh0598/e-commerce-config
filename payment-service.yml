@@ -31,8 +31,3 @@ feign:
 kafka:
   consumer:
     payment-group: payment-group
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
