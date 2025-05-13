@@ -10,16 +10,16 @@ spring:
       hibernate:
         jdbc:
           time_zone: UTC
-#  config:
-#    import: "configserver:"  # ✅ REQUIRED for Spring Boot 3.x
-#  cloud:
-#    config:
-#      uri: http://localhost:8888  # Fetch from Cloud Config Server
-#      fail-fast: true
   kafka:
     bootstrap-servers: 34.46.5.7:30721
     schema-registry:
       url: http://34.46.5.7:31580
+  config:
+    import: "configserver:"  # ✅ REQUIRED for Spring Boot 3.x
+  cloud:
+    config:
+      uri: http://34.46.5.7:32746  # Fetch from Cloud Config Server
+      fail-fast: true  # Ensure Eureka Server fails fast if Config Server is unavailable
 
 jwt:
   secret: giangnt2025randomasdawdakjcawnmawdawqerandomagainaweadawdasdawdawkanwdk
