@@ -43,3 +43,8 @@ spring:
             - Path=/api/v1/payments/**
           filters:
             - JwtAuthenticationFilter
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
